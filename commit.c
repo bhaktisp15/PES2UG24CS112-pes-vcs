@@ -34,6 +34,7 @@ int object_read(const ObjectID *id, ObjectType *type_out, void **data_out, size_
 // Parse raw commit data into a Commit struct.
 // Parses serialized commit object back into a Commit struct
 // Serializes a Commit struct into the text format for storage
+// Phase 4 complete: commit creation, serialization, parsing, and log
 int commit_parse(const void *data, size_t len, Commit *commit_out) {
     (void)len;
     const char *p = (const char *)data;
