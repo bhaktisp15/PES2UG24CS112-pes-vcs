@@ -157,6 +157,7 @@ int index_load(Index *index) {
     fclose(f);
     return 0;
 }
+// Persists the in-memory index back to .pes/index
 int index_save(const Index *index) {
     Index *sorted = malloc(sizeof(Index));
     if (!sorted) return -1;
