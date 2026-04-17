@@ -187,7 +187,7 @@ int index_save(const Index *index) {
     free(sorted);
     return 0;
 }
-
+// Hashes file contents and adds entry to the staging area
 int index_add(Index *index, const char *path) {
     // Read file contents
     FILE *f = fopen(path, "rb");
