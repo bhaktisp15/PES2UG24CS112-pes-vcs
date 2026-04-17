@@ -15,6 +15,7 @@
 // PROVIDED functions: index_find, index_remove, index_status
 // TODO functions:     index_load, index_save, index_add
 
+
 #include "index.h"
 #include "tree.h"
 #include <stdio.h>
@@ -236,3 +237,4 @@ int index_add(Index *index, const char *path) {
 
     return index_save(index);
 }
+// Phase 3 complete: index supports load, save, add, and status
