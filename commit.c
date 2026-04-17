@@ -186,7 +186,7 @@ int head_update(const ObjectID *new_commit) {
 }
 
 // ─── TODO: Implement these ───────────────────────────────────────────────────
-
+// Creates a new commit from the current index state and updates HEAD
 int commit_create(const char *message, ObjectID *commit_id_out) {
     Commit commit;
     memset(&commit, 0, sizeof(commit));
