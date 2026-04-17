@@ -127,6 +127,7 @@ static int compare_index_entries(const void *a, const void *b) {
     return strcmp(((const IndexEntry *)a)->path, ((const IndexEntry *)b)->path);
 }
 
+// Loads the index file from .pes/index into memory
 int index_load(Index *index) {
     index->count = 0;
 
