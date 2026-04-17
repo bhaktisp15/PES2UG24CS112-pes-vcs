@@ -58,6 +58,7 @@ int index_remove(Index *index, const char *path) {
 }
 
 // Print the status of the working directory.
+// Compares staged entries against working tree for status output
 int index_status(const Index *index) {
     printf("Staged changes:\n");
     int staged_count = 0;
