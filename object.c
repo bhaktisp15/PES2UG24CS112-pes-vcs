@@ -136,6 +136,7 @@ int object_write(ObjectType type, const void *data, size_t len, ObjectID *id_out
 
 // Read an object from the store.
 // Returns 0 on success, -1 on error (file not found, corrupt, etc.).
+// Reads and verifies object integrity via SHA256 before returning data
 int object_read(const ObjectID *id, ObjectType *type_out, void **data_out, size_t *len_out) {
     char path[512];
     object_path(id, path, sizeof(path));
