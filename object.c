@@ -64,6 +64,7 @@ int object_exists(const ObjectID *id) {
 
 // Write an object to the store.
 // Returns 0 on success, -1 on error.
+// Writes object to disk using atomic rename for crash safety
 int object_write(ObjectType type, const void *data, size_t len, ObjectID *id_out) {
     const char *type_str = (type == OBJ_BLOB) ? "blob" :
                            (type == OBJ_TREE) ? "tree" : "commit";
