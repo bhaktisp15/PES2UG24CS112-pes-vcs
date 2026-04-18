@@ -124,6 +124,7 @@ int tree_serialize(const Tree *tree, void **data_out, size_t *len_out) {
 
 // Recursive helper: builds a tree for entries sharing the same directory prefix
 // Recursively writes tree levels and stores each as an object
+// Recursively builds subtree objects bottom-up before parent
 static int write_tree_level(IndexEntry *entries, int count, int depth, ObjectID *id_out) {
     Tree tree;
     tree.count = 0;
