@@ -91,6 +91,7 @@ static int compare_tree_entries(const void *a, const void *b) {
 // Caller must free(*data_out).
 // Returns 0 on success, -1 on error.
 // Serializes tree entries in sorted order for deterministic hashing
+// Serializes tree entries into binary format for object storage
 int tree_serialize(const Tree *tree, void **data_out, size_t *len_out) {
     // Estimate max size: (6 bytes mode + 1 byte space + 256 bytes name + 1 byte null + 32 bytes hash) per entry
     size_t max_size = tree->count * 296; 
